@@ -29,3 +29,6 @@ npm run build
 ```sh
 npm run watch
 ```
+## render page
+
+look at dist directory
