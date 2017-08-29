@@ -12,7 +12,7 @@ npm install
 npm run build
 ```
 
-##watch
+## watch
 
 ```sh
 npm run watch
