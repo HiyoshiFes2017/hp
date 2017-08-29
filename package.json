@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "deploy": "ghpages --path dist",
+    "generate": "nuxt generate"
   },
   "repository": "git+https://github.com/HiyoshiFes2017/hp.git",
   "keywords": [],
@@ -15,6 +18,7 @@
   },
   "homepage": "https://github.com/HiyoshiFes2017/hp#readme",
   "devDependencies": {
+    "ghpages": "^0.0.10",
     "node-sass": "^4.5.3",
     "nuxt": "^1.0.0-rc3",
     "pug": "^2.0.0-rc.3",

@@ -9,7 +9,7 @@ import { applyAsyncData, sanitizeComponent, getMatchedComponents, getContext, mi
 const debug = require('debug')('nuxt:render')
 debug.color = 4 // force blue color
 
-const isDev = true
+const isDev = false
 
 const noopApp = () => new Vue({ render: (h) => h('div') })
 
@@ -70,13 +70,13 @@ export default async context => {
   // Create shared ctx
   const ctx = getContext(context, app)
 
-  const s = isDev && Date.now()
+  
 
   // Resolve components
   let Components = []
   try {
     Components = await Promise.all(getMatchedComponents(router.match(context.url)).map(Component => {
-      if (typeof Component !== 'function' || Component.super === Vue) {
+      if (typeof Component !== 'function' || Component.cid) {
         return sanitizeComponent(Component)
       }
       return Component().then(Component => sanitizeComponent(Component))
@@ -186,7 +186,7 @@ export default async context => {
     context.nuxt.error = context.error({ statusCode: 404, message: 'This page could not be found.' })
   }
 
-  if (asyncDatas.length) debug('Data fetching ' + context.url + ': ' + (Date.now() - s) + 'ms')
+  
 
   // datas are the first row of each
   context.nuxt.data = asyncDatas.map(r => r[0] || {})

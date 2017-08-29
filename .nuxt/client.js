@@ -28,6 +28,8 @@ let router
 const NUXT = window.__NUXT__ || {}
 NUXT.components = window.__COMPONENTS__ || null
 
+
+
 // Create and mount App
 createApp()
 .then(mountApp)
@@ -48,7 +50,7 @@ function componentOption(component, key, ...args) {
 
 function mapTransitions(Components, to, from) {
   const componentTransitions = component => {
-    const transition = componentOption(component, 'transition', to, from)
+    const transition = componentOption(component, 'transition', to, from) || {}
     return (typeof transition === 'string' ? { name: transition } : transition)
   }
 
@@ -254,7 +256,7 @@ async function render (to, from, next) {
     await Promise.all(Components.map((Component, i) => {
       // Check if only children route changed
       Component._path = compile(to.matched[i].path)(to.params)
-      if (!this._hadError && Component._path === _lastPaths[i] && (i + 1) !== Components.length) {
+      if (!this._hadError && this._isMounted && Component._path === _lastPaths[i] && (i + 1) !== Components.length) {
         return Promise.resolve()
       }
 
@@ -360,9 +362,6 @@ function fixPrepatch (to, ___) {
     this.setLayout(layout)
 
     
-    // Hot reloading
-    setTimeout(() => hotReloadAPI(this), 100)
-    
   })
 }
 
@@ -382,99 +381,6 @@ function nuxtReady (app) {
   })
 }
 
-
-// Special hot reload with asyncData(context)
-function hotReloadAPI (_app) {
-  if (!module.hot) return
-
-  let $components = []
-  let $nuxt = _app.$nuxt
-
-  while ($nuxt && $nuxt.$children && $nuxt.$children.length) {
-    $nuxt.$children.forEach((child, i) => {
-      if (child.$vnode.data.nuxtChild) {
-        let hasAlready = false
-        $components.forEach(component => {
-          if (component.$options.__file === child.$options.__file) {
-            hasAlready = true
-          }
-        })
-        if (!hasAlready) {
-          $components.push(child)
-        }
-      }
-      $nuxt = child
-    })
-  }
-
-  $components.forEach(addHotReload.bind(_app))
-}
-
-function addHotReload ($component, depth) {
-  if ($component.$vnode.data._hasHotReload) return
-  $component.$vnode.data._hasHotReload = true
-
-  var _forceUpdate = $component.$forceUpdate.bind($component.$parent)
-
-  $component.$vnode.context.$forceUpdate = () => {
-    let Components = getMatchedComponents(router.currentRoute)
-    let Component = Components[depth]
-    if (!Component) return _forceUpdate()
-    if (typeof Component === 'object' && !Component.options) {
-      // Updated via vue-router resolveAsyncComponents()
-      Component = Vue.extend(Component)
-      Component._Ctor = Component
-    }
-    this.error()
-    let promises = []
-    const next = function (path) {
-      this.$loading.finish && this.$loading.finish()
-      router.push(path)
-    }
-    let context = getContext({ route: router.currentRoute, isClient: true, hotReload: true, next: next.bind(this), error: this.error }, app)
-    this.$loading.start && this.$loading.start()
-    callMiddleware.call(this, Components, context)
-    .then(() => {
-      // If layout changed
-      if (depth !== 0) return Promise.resolve()
-      let layout = Component.options.layout || 'default'
-      if (typeof layout === 'function') {
-        layout = layout(context)
-      }
-      if (this.layoutName === layout) return Promise.resolve()
-      let promise = this.loadLayout(layout)
-      promise.then(() => {
-        this.setLayout(layout)
-        Vue.nextTick(() => hotReloadAPI(this))
-      })
-      return promise
-    })
-    .then(() => {
-      return callMiddleware.call(this, Components, context, this.layout)
-    })
-    .then(() => {
-      // Call asyncData(context)
-      let pAsyncData = promisify(Component.options.asyncData || noopData, context)
-      pAsyncData.then((asyncDataResult) => {
-        applyAsyncData(Component, asyncDataResult)
-        this.$loading.increase && this.$loading.increase(30)
-      })
-      promises.push(pAsyncData)
-      // Call fetch()
-      Component.options.fetch = Component.options.fetch || noopFetch
-      let pFetch = Component.options.fetch(context)
-      if (!pFetch || (!(pFetch instanceof Promise) && (typeof pFetch.then !== 'function'))) { pFetch = Promise.resolve(pFetch) }
-      pFetch.then(() => this.$loading.increase && this.$loading.increase(30))
-      promises.push(pFetch)
-      return Promise.all(promises)
-    })
-    .then(() => {
-      this.$loading.finish && this.$loading.finish()
-      _forceUpdate()
-      setTimeout(() => hotReloadAPI(this), 100)
-    })
-  }
-}
 
 
 async function mountApp(__app) {
@@ -502,9 +408,6 @@ async function mountApp(__app) {
     Vue.nextTick(() => {
       // Call window.onNuxtReady callbacks
       nuxtReady(_app)
-      
-      // Enable hot reloading
-      hotReloadAPI(_app)
       
     })
   }
