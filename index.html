@@ -1,1 +1,139 @@
-<!DOCTYPE html><html data-n-head="" data-n-head-ssr><meta data-n-head="true" charset="utf-8"><meta data-n-head="true" content="width=device-width,initial-scale=1" name="viewport"><title data-n-head="true"></title><link href="/_nuxt/manifest.a53f8da97133720f9011.js" rel="preload" as="script"><link href="/_nuxt/vendor.bundle.44ee21a5938c409f45c4.js" rel="preload" as="script"><link href="/_nuxt/nuxt.bundle.f92b21e70e6009e7d9be.js" rel="preload" as="script"><link href="/_nuxt/2.nuxt.bundle.c8b3120dbe0772fbd4ac.js" rel="preload" as="script"><link href="/_nuxt/0.nuxt.bundle.479a4b8ab2311cc72313.js" rel="preload" as="script"><link href="/_nuxt/1.nuxt.bundle.e236c0a273a44af090a6.js" rel="prefetch"><style data-vue-ssr-id="6282b6e0:0 58a6ea76:0 853b6e8a:0 f90d8ed4:0 7a83f904:0 d22f093e:0">.progress[data-v-49bd3cb4]{position:fixed;top:0;left:0;right:0;height:2px;width:0;-webkit-transition:width .2s,opacity .4s;-o-transition:width .2s,opacity .4s;transition:width .2s,opacity .4s;opacity:1;background-color:#efc14e;z-index:999999}header{top:0;left:0;height:40px;width:calc(100% - 40px);margin:0;padding:0 20px;background-color:hsla(0,0%,39%,.8)}header h1{font-size:25px}.pages{margin-top:50px}main{margin:0 20px}main md-layout{margin-top:10px}</style><body data-n-head=""><div data-server-rendered="true" id="__nuxt"><div class="progress" data-v-49bd3cb4 style="width:0%;height:2px;background-color:#000;opacity:0"></div><div><md-toolbar><md-button class="md-icon-button"></md-button><h2 class="md-title">Hiyoshi Festival 2017</h2></md-toolbar><div><md-toolbar class="md-dense"><h2 class="md-title" style="flex:1">Fes</h2></md-toolbar><main><md-layout md-gutter="md-gutter"><md-layout md-flex-large="20" md-flex-medium="33" md-flex-small="50" md-flex-xsmall="100"><md-card><md-card-media><img alt="People" src="/_nuxt/img/pic1.51c9d63.png"></md-card-media><md-card-header><div class="md-title">Title goes here</div><div class="md-subhead">Subtitle here</div></md-card-header><md-card-actions><md-button><a href="/about">Go to about</a></md-button><md-button>Action</md-button></md-card-actions><md-card-content><lorem>ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.</lorem></md-card-content></md-card></md-layout><md-layout md-flex-large="20" md-flex-medium="33" md-flex-small="50" md-flex-xsmall="100"><p>50</p></md-layout><md-layout md-flex-large="20" md-flex-medium="33" md-flex-small="50" md-flex-xsmall="100"><p>50</p></md-layout><md-layout md-flex-large="20" md-flex-medium="33" md-flex-small="50" md-flex-xsmall="100"><p>50</p></md-layout><md-layout md-flex-large="20" md-flex-medium="33" md-flex-small="50" md-flex-xsmall="100"><p>50</p></md-layout><md-layout md-flex-large="20" md-flex-medium="33" md-flex-small="50" md-flex-xsmall="100"><p>50</p></md-layout></md-layout></main></div></div></div><script type="text/javascript">window.__NUXT__={layout:"default",data:[{}],error:null,serverRendered:!0}</script><script defer src="/_nuxt/manifest.a53f8da97133720f9011.js"></script><script defer src="/_nuxt/2.nuxt.bundle.c8b3120dbe0772fbd4ac.js"></script><script defer src="/_nuxt/0.nuxt.bundle.479a4b8ab2311cc72313.js"></script><script defer src="/_nuxt/vendor.bundle.44ee21a5938c409f45c4.js"></script><script defer src="/_nuxt/nuxt.bundle.f92b21e70e6009e7d9be.js"></script>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>日吉祭ホームページ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=600" />
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <div id="headernav" class="inactive nav-top">
+        <a href="index.html"><img src="images/header_icon.png" alt="日吉祭実行委員会"></a>
+        <div id="sp-menubtn" class="menu-trigger" onclick="menu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <a href="about.html"><li>日吉祭とは</li></a>
+            <a href="map.html"><li>校内マップ</li></a>
+            <a href="briefing.html"><li>学校説明会</li></a>
+            <a href="access.html"><li>交通アクセス</li></a>
+            <a href="ivents.html"><li>イベント・出展</li></a>
+            <a href="twitter.html"><li>公式Twitter</li></a>
+            <a href="blog.html"><li>委員ブログ</li></a>
+        </ul>
+    </div>
+    
+    <style>
+        html,body {
+            height: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="top-wrap">
+    <div id="topheader">
+        <div class="top-logobg">
+            <img src="images/topimg.png" alt="ロゴ">
+        </div>
+    </div>
+</div>
+
+
+<div id="top-welcome" class="contents bg1">
+    <h2>日吉祭HPへようこそ！</h2>
+    <p class="p-top">今年の日吉祭は2017年10月29日･30日の2日間での開催となります。</p>
+    <p>詳しい情報は<a href="about.html">こちら</a></p>
+</div>
+
+    
+<div id="top-news">
+    <span>NEWS</span>
+    <ul>
+        <li>11/1（火）第67回日吉祭が開催されました。</li>
+        <li>10/29（土）招待試合について、掲載しました。</li>
+    </ul>
+</div>
+    
+    
+<div id="footer-menu">
+    <div class="footer-menu footer-menu01">
+        <div class="wrap">
+            <img src="images/icon_what.png" alt="日吉祭とは">
+            <span>日吉祭とは</span>
+            <p>日吉祭全般について</p>
+            <a class="footer-menu_btn" href="about.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu02">
+        <div class="wrap">
+            <img src="images/icon_map.png" alt="校内マップ">
+            <span>校内マップ</span>
+            <p>迷った方はこちら</p>
+            <a class="footer-menu_btn" href="map.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu03">
+        <div class="wrap">
+            <img src="images/icon_description.png" alt="学校説明会">
+            <span>学校説明会</span>
+            <p>生徒会主催学校説明会の<br class="br-min2">詳細はこちら</p>
+            <a class="footer-menu_btn" href="briefing.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu04">
+        <div class="wrap">
+            <img src="images/icon_access.png" alt="交通アクセス">
+            <span>交通アクセス</span>
+            <p>日吉祭会場へのアクセスは<br class="br-min">こちら</p>
+            <a class="footer-menu_btn" href="access.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu05">
+        <div class="wrap">
+            <img src="images/icon_ivent.png" alt="イベント・出展">
+            <span>イベント・出展</span>
+            <p>どのようなイベントがあるか<br class="br-min">知りたい方へ</p>
+            <a class="footer-menu_btn" href="ivents.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu06">
+        <div class="wrap">
+            <img src="images/icon_twitter.png" alt="公式Twitter">
+            <span>公式Twitter</span>
+            <p>日吉祭公式Twitterは<br class="br-min">こちら</p>
+            <a class="footer-menu_btn" href="twitter.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu07">
+        <div class="wrap">
+            <img src="images/icon_blog.png" alt="委員ブログ">
+            <span>委員ブログ</span>
+            <p>日吉祭の裏側を<br class="br-min">こっそりお伝え</p>
+            <a class="footer-menu_btn" href="blog.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+    
+</body>
+
+
+<footer>
+    <img src="images/logo.png" alt="日吉祭実行委員会">
+    <a href="index.html">日吉祭実行委員会</a>
+</footer>
+    
+</html>

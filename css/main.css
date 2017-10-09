@@ -1,0 +1,519 @@
+/* 日吉祭とは */
+.bg_about {
+    background-image: url(../images/07.jpg);
+}
+.greeting {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto 0;
+}
+.greeting__l {
+    display: block;
+    width: 25%;
+    float: left;
+}
+.greeting__r {
+    display: block;
+    width: 75%;
+    font-size: 0.9em;
+    text-align: left;
+    padding-left: 40px;
+    overflow: auto;
+}
+.greeting__r p {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+.greeting-person {
+    display: block;
+    margin-top: 10px;
+    text-align: right;   
+}
+.greeting-person b {
+    font-size: 1.3em;
+}
+
+/* 校内マップ */
+.bg_map {
+    background-image: url(../images/bg_map.jpg);
+}
+.campus-map01 {
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+/* 学校説明会 */
+.bg_briefing {
+    background-image: url(../images/bg_description.jpg);
+}
+
+/* 交通アクセス */
+.bg_access {
+    background-image: url(../images/bg_access.jpg);
+}
+
+/* イベント・出展 */
+.bg_ivents {
+    background-image: url(../images/bg_ivent.jpg);
+}
+.council {
+    display: inline-block;
+    text-align: left;
+}
+.exhibit-box {
+    max-width: 800px;
+    margin: auto;
+}
+.exhibit {
+    position: relative;
+    display: block;
+    width: 50%;
+    font-size: 1.5em;
+    float: left;
+    text-align: left;
+    letter-spacing: 0.2em;
+    padding: 10px 0;
+    padding-left: 40px;
+}
+.exhibit--class .exhibit {
+    width: 25%;
+    letter-spacing: 0.4em;
+}
+.exhibit--orche {
+    width: 100%;
+}
+.exhibit::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: solid 5px #882222;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: .3s;
+}
+@media screen and (max-width: 1120px) {
+.exhibit-box {
+    max-width: 500px;
+}
+.exhibit {
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+}   
+}
+
+
+
+#map-container {/* 校舎内マップ */
+    max-width: 1800px;
+    margin: auto;
+}
+@media screen and (max-width: 1820px) {
+    #map-container {max-width: 1200px;}
+}
+@media screen and (max-width: 1250px) {
+    #map-container {max-width: 600px;}
+}
+
+.map-bg {
+    padding: 50px 0;
+}
+.map-box {
+    position: relative;
+    width: 600px;
+    height: 1000px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 50px;
+    float: left;
+}
+@media screen and (max-width: 1220px) {
+    .map-box {float: none;}
+}
+.map-box h4 {
+    font-size: 2.5em;
+    color: #223355;
+    letter-spacing: 0.3em;
+}
+.map01 {
+    background-image: url(../images/map01.png);
+}
+.map02,
+.map03 {
+    background-image: url(../images/map02.png);
+}
+
+@font-face {
+    font-family: "genshin";
+    src: url("GenShinGothic-Medium.ttf");
+}
+
+
+#info-container {/* 教室別出展内容 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.info-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 60px #223355;
+    border-bottom: solid 60px transparent; 
+    border-left: solid 60px transparent; 
+    cursor: pointer;
+}
+.close img {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 25px;
+    height: 25px;
+}
+.close:hover {
+    opacity: .9;   
+}
+#info-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 1000px;
+    height: 500px;
+    background: rgba(255,255,255,0.9);
+    margin-top: -250px;
+    margin-left: -500px;
+    text-align: left;
+    line-height: 1.5;
+}
+@media screen and (max-width: 1120px) {
+#info-box {
+    left: 2.5%;
+    width: 95%;
+    max-width: 1000px;
+    margin-left: 0;
+}
+}
+.info-contents h4 span {
+    font-size: 1.8em;
+    margin-right: 10px;
+}
+.info-contents h4 {
+    margin: 40px 0 -20px 40px;
+}
+.info-contents p {
+    margin: 40px;
+}
+.info-contents {
+    display: none;   
+}
+#info-container.active,
+.info-contents.active {
+    display: block;   
+}
+
+.room {/* 教室アイコン */
+    position: absolute;
+    display: block;
+    width: 59px;
+    height: 53px;
+    color: #223355;
+    font-family: "genshin", sans-serif;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.room:hover {
+    color: #223355;
+    background: rgba(34,51,85,0.1); 
+}
+.room span {
+    display: block;
+    font-size: 1.6em;
+    font-family: "genshin", sans-serif;
+    margin-bottom: 2px;
+}
+.room:nth-child(2) {
+    top: 76px;
+    left: 139px;
+}
+.room:nth-child(3) {
+    top: 76px;
+    left: 199px;
+}
+.room:nth-child(4) {
+    top: 76px;
+    left: 259px;
+}
+.room:nth-child(5) {
+    top: 76px;
+    left: 319px;
+}
+.room:nth-child(6) {
+    top: 76px;
+    left: 379px;
+}
+.room:nth-child(7) {
+    top: 162px;
+    left: 438px;
+}
+.room:nth-child(8) {
+    top: 216px;
+    left: 438px;
+}
+.room:nth-child(9) {
+    top: 270px;
+    left: 438px;
+}
+.room:nth-child(10) {
+    top: 346px;
+    left: 438px;
+}
+.room:nth-child(11) {
+    top: 400px;
+    left: 438px;
+}
+.room:nth-child(12) {
+    top: 604px;
+    left: 438px;
+}
+.room:nth-child(13) {
+    top: 680px;
+    left: 438px;
+}
+.room:nth-child(14) {
+    top: 734px;
+    left: 438px;
+}
+.room:nth-child(15) {
+    top: 788px;
+    left: 438px;
+}
+.room:nth-child(16) {
+    top: 842px;
+    left: 325px;
+}
+.room:nth-child(17) {
+    top: 842px;
+    left: 265px;
+}
+.room:nth-child(18) {
+    top: 842px;
+    left: 205px;
+}
+.room:nth-child(19) {
+    top: 842px;
+    left: 145px;
+}
+
+
+
+/* 公式twitter */
+.bg_twitter {
+    background-image: url(../images/bg_twitter.jpg);
+    background-position: top center !important;
+}
+.twitter-box {
+    width: 1100px;
+    min-height: 500px;
+    margin: 0 auto 100px;
+}
+#twitter-widget-0,
+#twitter-widget-1 {
+    border: solid 1px #eee !important;
+}
+#twitter-widget-0 {
+    margin-right: 50px;
+}
+@media screen and (max-width: 1120px) {
+.twitter-box {
+    width: 518px;
+    min-height: 1050px;
+}
+#twitter-widget-1 {
+    margin-top: 50px !important;  
+}
+}
+
+
+/* 委員ブログ */
+.bg_blog {
+    background-image: url(../images/bg_blog.jpg);
+}
+.bg_blog-cont {
+    background-image: url(../images/02.jpg);
+}
+#page-head.bg_blog-cont h1 {
+    height: 500px;
+    font-size: 3.0em;
+    padding: 140px 30px 0;
+}
+#page-head.bg_blog-cont h1 span {
+    display: block;
+    width: 100%;
+    font-size: 0.5em;
+    text-shadow: none;
+    line-height: 2.5em;
+}
+#page-head.bg_blog-cont h1 p {
+    display: block;
+    width: 100%;
+    line-height: 1.4em;
+}
+
+#blog-list--box {
+    padding: 10px 0 30px;   
+}
+
+.blog-list {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+    border-top: solid 1px #ddd;
+}
+.blog-list--top {
+    border-top: none;
+}
+
+.blog-list span {
+    color: #aaa;
+    letter-spacing: 0.2em;
+}
+.blog-list h4 {
+    margin: 15px 0 30px;   
+    letter-spacing: 0.2em;
+}
+.blog-list img {
+    width: 30%;
+    float: left; 
+}
+.blog-list p {
+    width: 70%;
+    overflow: hidden;
+    padding-left: 60px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+}
+.blog-more {
+    width: 250px;
+    margin-top: 30px;
+}
+
+.blog-post {/* ブログ記事 */
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 20px;
+}
+.blog-post p {
+    line-height: 1.7;
+}
+.blog-post .btn {
+    width: 300px;
+    margin: 50px auto 0;
+}
+@media screen and (max-width: 1120px) {
+.blog-post {
+    padding: 56px 50px;
+}
+}
+
+
+/* トップページ */
+.top-wrap {
+    height: 100%;
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+#topheader {
+    display: block;
+    height: 100%;
+    background: url(../images/top.jpg) no-repeat center center;
+    background-size: cover;
+}
+.top-logobg {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 100%;
+    background: rgba(136,34,34,0.8);
+    margin-left: 100px;
+}
+.top-logobg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    margin-top: -200px;
+    margin-left: -125px;
+}
+@media screen and (max-width: 1120px) {
+.top-wrap {
+    height: 600px;
+    padding-top: 60px;
+    padding-bottom: 0;
+}
+.top-logobg {
+    width: 220px;
+    margin-left: 60px;
+}
+.top-logobg img {
+    width: 150px;
+    margin-top: -120px;
+    margin-left: -75px;
+}
+#top-welcome {
+    padding: 100px 20px 50px;
+}
+}
+
+#top-news {/* ニュース */
+    width: 95%;
+    max-width: 800px;
+    margin: 40px auto 100px;
+    letter-spacing: 0.12em;
+}
+#top-news span {
+    display: block;
+    width: 100%;
+    border-top: solid 1px black;
+    color: #223355;
+    padding: 12px 20px;
+}
+#top-news ul {
+    width: 100%;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+#top-news ul li {
+    font-size: 0.9em;
+    padding: 12px 20px;
+    border-top: solid 1px #ccc;
+}
+#top-news ul li:nth-child(1) {
+    border-top: none;
+}

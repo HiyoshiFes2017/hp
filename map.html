@@ -1,0 +1,493 @@
+<!DOCTYPE html>  
+<html>
+
+<head>
+    <title>校内マップ｜日吉祭</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=600" />
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <div id="headernav" class="inactive">
+        <a href="index.html"><img src="images/header_icon.png" alt="日吉祭実行委員会"></a>
+        <div id="sp-menubtn" class="menu-trigger" onclick="menu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <a href="about.html"><li>日吉祭とは</li></a>
+            <a href="map.html"><li>校内マップ</li></a>
+            <a href="briefing.html"><li>学校説明会</li></a>
+            <a href="access.html"><li>交通アクセス</li></a>
+            <a href="ivents.html"><li>イベント・出展</li></a>
+            <a href="twitter.html"><li>公式Twitter</li></a>
+            <a href="blog.html"><li>委員ブログ</li></a>
+        </ul>
+    </div>
+</head>
+
+
+<body>
+<div id="page-head" class="bg_map">
+    <h1>校内マップ</h1>
+</div>
+
+
+<div class="contents bg1">
+    <h3>全体マップ</h3>
+    <p>※大学競技場は日吉祭開催場所ではありません。<br class="br-sp">あくまで目印として地図に掲載しています。</p>
+    <img class="campus-map01" src="images/main_map.jpg" alt="全体マップ">
+</div>
+
+    
+<div class="contents bg2">
+    <h3>本校舎A棟マップ</h3>
+    <p>全校生徒2100人以上を軽々収容できる大きさの校舎が自慢の塾高ですが、<br>
+    広すぎるゆえに慣れていない方の中でも迷われる方は少なくないはず。<br>
+    参考になるかは定かではありますが、気になる所はクリックしてみてください。<br>
+    写真を添えてご紹介いたします。</p>
+</div>
+    
+    
+<div class="contents bg1 map-bg">
+    <div class="map-box map01">
+    <h4>1F</h4>
+        <a class="room" onclick="info(101)"><span>2A</span>101</a>
+        <a class="room" onclick="info(102)"><span>2B</span>102</a>
+        <a class="room" onclick="info(103)"><span>2C</span>103</a>
+        <a class="room" onclick="info(104)"><span>2D</span>104</a>
+        <a class="room" onclick="info(105)"><span>2E</span>105</a>
+        <a class="room" onclick="info(107)"><span>2F</span>107</a>
+        <a class="room" onclick="info(108)"><span>2G</span>108</a>
+        <a class="room" onclick="info(109)"><span>2H</span>109</a>
+        <a class="room" onclick="info(111)"><span>2I</span>111</a>
+        <a class="room" onclick="info(112)"><span>2J</span>112</a>
+        <a class="room" onclick="info(116)"><span>2K</span>116</a>
+        <a class="room" onclick="info(118)"><span>2L</span>118</a>
+        <a class="room" onclick="info(119)"><span>2M</span>119</a>
+        <a class="room" onclick="info(120)"><span>2N</span>120</a>
+        <a class="room" onclick="info(122)"><span>2O</span>122</a>
+        <a class="room" onclick="info(123)"><span>2P</span>123</a>
+        <a class="room" onclick="info(124)"><span>2Q</span>124</a>
+        <a class="room" onclick="info(125)"><span>2R</span>125</a>
+    </div>
+    
+    <div class="map-box map02">
+    <h4>2F</h4>
+        <a class="room" onclick="info(201)"><span>3A</span>201</a>
+        <a class="room" onclick="info(202)"><span>3B</span>202</a>
+        <a class="room" onclick="info(203)"><span>3C</span>203</a>
+        <a class="room" onclick="info(204)"><span>3D</span>204</a>
+        <a class="room" onclick="info(205)"><span>3E</span>205</a>
+        <a class="room" onclick="info(207)"><span>3F</span>207</a>
+        <a class="room" onclick="info(208)"><span>3G</span>208</a>
+        <a class="room" onclick="info(209)"><span>3H</span>209</a>
+        <a class="room" onclick="info(211)"><span>3I</span>211</a>
+        <a class="room" onclick="info(212)"><span>3J</span>212</a>
+        <a class="room" onclick="info(216)"><span>3K</span>216</a>
+        <a class="room" onclick="info(218)"><span>3L</span>218</a>
+        <a class="room" onclick="info(219)"><span>3M</span>219</a>
+        <a class="room" onclick="info(220)"><span>3N</span>220</a>
+        <a class="room" onclick="info(222)"><span>3O</span>222</a>
+        <a class="room" onclick="info(223)"><span>3P</span>223</a>
+        <a class="room" onclick="info(224)"><span>3Q</span>224</a>
+        <a class="room" onclick="info(225)"><span>3R</span>225</a>
+    </div>
+    
+    <div class="map-box map03">
+    <h4>3F</h4>
+        <a class="room" onclick="info(301)"><span>1A</span>301</a>
+        <a class="room" onclick="info(302)"><span>1B</span>302</a>
+        <a class="room" onclick="info(303)"><span>1C</span>303</a>
+        <a class="room" onclick="info(304)"><span>1D</span>304</a>
+        <a class="room" onclick="info(305)"><span>1E</span>305</a>
+        <a class="room" onclick="info(307)"><span>1F</span>307</a>
+        <a class="room" onclick="info(308)"><span>1G</span>308</a>
+        <a class="room" onclick="info(309)"><span>1H</span>309</a>
+        <a class="room" onclick="info(311)"><span>1I</span>311</a>
+        <a class="room" onclick="info(312)"><span>1J</span>312</a>
+        <a class="room" onclick="info(316)"><span>1K</span>316</a>
+        <a class="room" onclick="info(318)"><span>1L</span>318</a>
+        <a class="room" onclick="info(319)"><span>1M</span>319</a>
+        <a class="room" onclick="info(320)"><span>1N</span>320</a>
+        <a class="room" onclick="info(322)"><span>1O</span>322</a>
+        <a class="room" onclick="info(323)"><span>1P</span>323</a>
+        <a class="room" onclick="info(324)"><span>1Q</span>324</a>
+        <a class="room" onclick="info(325)"><span>1R</span>325</a>
+    </div>
+    
+    <div class="clear"></div>
+    
+    
+    
+    
+<div id="info-container">
+    <div class="info-bg" onclick="remove()"></div>
+    <div id="info-box">
+        <div class="close" onclick="remove()"><img src="images/close.png"></div>
+        
+        <!-- 1F　出展内容 -->
+        <div id="info101" class="info-contents">
+            <h4><span>2A</span>101</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info102" class="info-contents">
+            <h4><span>2B</span>102</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info103" class="info-contents">
+            <h4><span>2C</span>103</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info104" class="info-contents">
+            <h4><span>2D</span>104</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info105" class="info-contents">
+            <h4><span>2E</span>105</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info107" class="info-contents">
+            <h4><span>2F</span>107</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info108" class="info-contents">
+            <h4><span>2G</span>108</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info109" class="info-contents">
+            <h4><span>2H</span>109</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info111" class="info-contents">
+            <h4><span>2I</span>111</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info112" class="info-contents">
+            <h4><span>2H</span>112</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info116" class="info-contents">
+            <h4><span>2K</span>116</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info118" class="info-contents">
+            <h4><span>2L</span>118</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info119" class="info-contents">
+            <h4><span>2M</span>119</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info120" class="info-contents">
+            <h4><span>2N</span>120</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info122" class="info-contents">
+            <h4><span>2O</span>122</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info123" class="info-contents">
+            <h4><span>2P</span>123</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info124" class="info-contents">
+            <h4><span>2Q</span>124</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info125" class="info-contents">
+            <h4><span>2R</span>125</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+    
+        
+        
+        <!-- 2F　出展内容 -->
+        <div id="info201" class="info-contents">
+            <h4><span>3A</span>201</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info202" class="info-contents">
+            <h4><span>3B</span>202</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info203" class="info-contents">
+            <h4><span>3C</span>203</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info204" class="info-contents">
+            <h4><span>3D</span>204</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info205" class="info-contents">
+            <h4><span>3E</span>205</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info207" class="info-contents">
+            <h4><span>3F</span>207</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info208" class="info-contents">
+            <h4><span>3G</span>208</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info209" class="info-contents">
+            <h4><span>3H</span>209</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info211" class="info-contents">
+            <h4><span>3I</span>211</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info212" class="info-contents">
+            <h4><span>3H</span>212</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info216" class="info-contents">
+            <h4><span>3K</span>216</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info218" class="info-contents">
+            <h4><span>3L</span>218</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info219" class="info-contents">
+            <h4><span>3M</span>219</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info220" class="info-contents">
+            <h4><span>3N</span>220</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info222" class="info-contents">
+            <h4><span>3O</span>222</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info223" class="info-contents">
+            <h4><span>3P</span>223</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info224" class="info-contents">
+            <h4><span>3Q</span>224</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info225" class="info-contents">
+            <h4><span>3R</span>225</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        
+        
+        <!-- 3F　出展内容 -->
+        <div id="info301" class="info-contents">
+            <h4><span>1A</span>301</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info302" class="info-contents">
+            <h4><span>1B</span>302</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info303" class="info-contents">
+            <h4><span>1C</span>303</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info304" class="info-contents">
+            <h4><span>1D</span>304</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info305" class="info-contents">
+            <h4><span>1E</span>305</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info307" class="info-contents">
+            <h4><span>1F</span>307</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info308" class="info-contents">
+            <h4><span>1G</span>308</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info309" class="info-contents">
+            <h4><span>1H</span>309</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info311" class="info-contents">
+            <h4><span>1I</span>311</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info312" class="info-contents">
+            <h4><span>1H</span>312</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info316" class="info-contents">
+            <h4><span>1K</span>316</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info318" class="info-contents">
+            <h4><span>1L</span>318</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info319" class="info-contents">
+            <h4><span>1M</span>319</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info320" class="info-contents">
+            <h4><span>1N</span>320</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info322" class="info-contents">
+            <h4><span>1O</span>322</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info323" class="info-contents">
+            <h4><span>1P</span>323</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info324" class="info-contents">
+            <h4><span>1Q</span>324</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+        
+        <div id="info325" class="info-contents">
+            <h4><span>1R</span>325</h4>
+            <p>出展内容を記載してください</p>
+        </div>
+
+        
+    </div>
+</div>
+    
+    
+</div>
+
+
+    
+    
+<div id="footer-menu">
+    <div class="footer-menu footer-menu01">
+        <div class="wrap">
+            <img src="images/icon_what.png" alt="日吉祭とは">
+            <span>日吉祭とは</span>
+            <p>日吉祭全般について</p>
+            <a class="footer-menu_btn" href="about.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu02">
+        <div class="wrap">
+            <img src="images/icon_map.png" alt="校内マップ">
+            <span>校内マップ</span>
+            <p>迷った方はこちら</p>
+            <a class="footer-menu_btn" href="map.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu03">
+        <div class="wrap">
+            <img src="images/icon_description.png" alt="学校説明会">
+            <span>学校説明会</span>
+            <p>生徒会主催学校説明会の<br class="br-min2">詳細はこちら</p>
+            <a class="footer-menu_btn" href="briefing.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu04">
+        <div class="wrap">
+            <img src="images/icon_access.png" alt="交通アクセス">
+            <span>交通アクセス</span>
+            <p>日吉祭会場へのアクセスは<br class="br-min">こちら</p>
+            <a class="footer-menu_btn" href="access.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu05">
+        <div class="wrap">
+            <img src="images/icon_ivent.png" alt="イベント・出展">
+            <span>イベント・出展</span>
+            <p>どのようなイベントがあるか<br class="br-min">知りたい方へ</p>
+            <a class="footer-menu_btn" href="ivents.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu06">
+        <div class="wrap">
+            <img src="images/icon_twitter.png" alt="公式Twitter">
+            <span>公式Twitter</span>
+            <p>日吉祭公式Twitterは<br class="br-min">こちら</p>
+            <a class="footer-menu_btn" href="twitter.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="footer-menu footer-menu07">
+        <div class="wrap">
+            <img src="images/icon_blog.png" alt="委員ブログ">
+            <span>委員ブログ</span>
+            <p>日吉祭の裏側を<br class="br-min">こっそりお伝え</p>
+            <a class="footer-menu_btn" href="blog.html">＞このページを見る</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+</body>
+
+
+<footer>
+    <img src="images/logo.png" alt="日吉祭実行委員会">
+    <a href="index.html">日吉祭実行委員会</a>
+</footer>
+    
+</html>
