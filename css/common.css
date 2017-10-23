@@ -26,10 +26,10 @@ p {
     letter-spacing: 0.1em;
 }
 .p-top {
-    margin-top: 30px;   
+    margin-top: 30px;
 }
 .p-large01 {
-    font-size: 1.2em;   
+    font-size: 1.2em;
 }
 .p-large02 {
     font-size: 1.4em;
@@ -103,6 +103,12 @@ h3::before {
 }
 h4 {
     font-size: 1.4em;
+		position: relative;
+    font-weight: normal;
+    color: #223355;
+    letter-spacing: 0.25em;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1120px) {
@@ -142,12 +148,12 @@ h3 {
     top: 12px;
     right: 40px;
     display: inline-block;
-    width: 980px;
+    width: 960px;
     height: 36px;
     transition: .5s;
 }
 #headernav ul li {
-    width: 140px;
+    width: 120px;
     height: 100%;
     color: white;
     font-size: 0.9em;
@@ -182,7 +188,7 @@ h3 {
         margin-right: -490px;
     }
     #sp-menubtn {
-        display: none;   
+        display: none;
     }
 }
 
@@ -212,6 +218,9 @@ h3 {
 
 
 @media screen and (max-width: 1120px) {
+	p {
+		font-size: 22px !important;
+	}
     #headernav ul {
         height: 0;
         top: 60px;
@@ -341,12 +350,20 @@ h3 {
     color: white;
 }
 .btn-l {
-    width: 47%;
+    width: 31.5%;
     float: left;
 }
+
+.btn-c {
+    width: 31.5%;
+    float: left;
+		margin-left: 1.5%;
+}
+
 .btn-r {
-    width: 47%;
-    float: right;
+    width: 31.5%;
+    float: left;
+		margin-left: 1.5%;
 }
 
 
@@ -376,14 +393,14 @@ footer a {
 }
 .footer-menu {
     position: relative;
-    width: 33.33%;
+    width: 25%;
     height: 350px;
     color: white;
     float: left;
     text-align: center;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; 
+    background-size: cover;
 }
 .footer-menu .wrap {
     position: absolute;
@@ -395,32 +412,35 @@ footer a {
     background: rgba(34,51,85,0.6);
     padding-top: 55px;
 }
-.footer-menu04,
+/*.footer-menu04,
 .footer-menu05,
 .footer-menu06,
 .footer-menu07 {
     width: 25%;
-}
+}*/
 .footer-menu01 {
-    background-image: url(../images/07.jpg); 
+    background-image: url(../images/07.jpg);
 }
 .footer-menu02 {
-    background-image: url(../images/bg_map2.jpg); 
+    background-image: url(../images/bg_map2.jpg);
 }
 .footer-menu03 {
-    background-image: url(../images/bg_description.jpg); 
+    background-image: url(../images/bg_description.jpg);
 }
 .footer-menu04 {
-    background-image: url(../images/bg_access.jpg); 
+    background-image: url(../images/bg_access.jpg);
 }
 .footer-menu05 {
-    background-image: url(../images/bg_ivent.jpg); 
+    background-image: url(../images/bg_ivent.jpg);
 }
 .footer-menu06 {
-    background-image: url(../images/bg_twitter.jpg); 
+    background-image: url(../images/bg_twitter.jpg);
 }
 .footer-menu07 {
-    background-image: url(../images/bg_blog.jpg); 
+    background-image: url(../images/bg_blog.jpg);
+}
+.footer-menu08 {
+    background-image: url(../images/shotai.png);
 }
 
 .footer-menu img {
@@ -463,17 +483,14 @@ footer a {
 .footer-menu .wrap {
     padding-top: 30px;
 }
-.footer-menu01,
-.footer-menu02,
-.footer-menu06,
-.footer-menu07 {
+.footer-menu {
     width: 50%;
 }
-.footer-menu03,
+/*.footer-menu03,
 .footer-menu04,
 .footer-menu05 {
     width: 33.33%;
-}
+}*/
 .footer-menu01,
 .footer-menu02 {
     height: 220px;
@@ -500,16 +517,16 @@ footer a {
 
 @media screen and (min-width: 1550px) {
     .br-min {
-        display: none;   
+        display: none;
     }
 }
 @media screen and (min-width: 1121px) {
     .br-min2 {
-        display: none;   
+        display: none;
     }
 }
 @media screen and (min-width: 900px) {
     .br-sp {
-        display: none;   
+        display: none;
     }
 }
